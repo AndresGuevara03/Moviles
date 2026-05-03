@@ -43,7 +43,7 @@ Esta es una aplicación móvil desarrollada en Flutter que presenta mi lista del
 - BorderRadius redondeado con borde rojo oscuro
 
 ### AppBar Interactivo
-- Título dinámico que alterna entre "Hola, Flutter" y "¡Título cambiado!"
+- Título dinámico que alterna entre "Hola, Flutter 1.0.1" y "¡Título cambiado!"
 - Botón que demonstra setState()
 - Fondo rojo oscuro (#8B0000)
 - Elevation de 10 para profundidad
@@ -66,13 +66,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _appBarTitle = "Hola, Flutter";
+  String _appBarTitle = "Hola, Flutter 1.0.1";
   
   void _toggleTitle() {
     setState(() {
-      _appBarTitle = _appBarTitle == "Hola, Flutter"
+      _appBarTitle = _appBarTitle == "Hola, Flutter 1.0.1"
           ? "¡Título cambiado!"
-          : "Hola, Flutter";
+          : "Hola, Flutter 1.0.1";
     });
   }
 }
@@ -140,9 +140,9 @@ Stack(
 El patrón central de la app. Al presionar el botón "Cambiar Título", se invoca:
 ```dart
 setState(() {
-  _appBarTitle = _appBarTitle == "Hola, Flutter"
+  _appBarTitle = _appBarTitle == "Hola, Flutter 1.0.1"
       ? "¡Título cambiado!"
-      : "Hola, Flutter";
+      : "Hola, Flutter 1.0.1";
 });
 ```
 
