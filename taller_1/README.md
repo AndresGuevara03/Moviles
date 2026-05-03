@@ -43,7 +43,7 @@ Esta es una aplicación móvil desarrollada en Flutter que presenta mi lista del
 - BorderRadius redondeado con borde rojo oscuro
 
 ### AppBar Interactivo
-- Título dinámico que alterna entre "Hola, Flutter" y "¡Título cambiado!"
+- Título dinámico que alterna entre "Hola, Flutter 1.0.1" y "¡Título cambiado!"
 - Botón que demonstra setState()
 - Fondo rojo oscuro (#8B0000)
 - Elevation de 10 para profundidad
@@ -66,13 +66,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _appBarTitle = "Hola, Flutter";
+  String _appBarTitle = "Hola, Flutter 1.0.1";
   
   void _toggleTitle() {
     setState(() {
-      _appBarTitle = _appBarTitle == "Hola, Flutter"
+      _appBarTitle = _appBarTitle == "Hola, Flutter 1.0.1"
           ? "¡Título cambiado!"
-          : "Hola, Flutter";
+          : "Hola, Flutter 1.0.1";
     });
   }
 }
@@ -140,9 +140,9 @@ Stack(
 El patrón central de la app. Al presionar el botón "Cambiar Título", se invoca:
 ```dart
 setState(() {
-  _appBarTitle = _appBarTitle == "Hola, Flutter"
+  _appBarTitle = _appBarTitle == "Hola, Flutter 1.0.1"
       ? "¡Título cambiado!"
-      : "Hola, Flutter";
+      : "Hola, Flutter 1.0.1";
 });
 ```
 
@@ -195,3 +195,28 @@ taller_1/
 ## 👤 Autor
 
 Andres David Guevara Martinez
+
+## 📦 Distribución de APK con Firebase App Distribution
+
+### Flujo de Trabajo
+El proceso de distribución sigue el siguiente flujo:
+`Generar APK -> App Distribution -> Testers -> Instalación -> Actualización`
+
+### Publicación
+Para replicar el proceso de publicación en el equipo:
+1. Ejecutar el comando de build: `flutter build apk`
+2. Ir a Firebase Console -> App Distribution.
+3. Subir el archivo `app-release.apk` generado en `build/app/outputs/flutter-apk/`.
+4. Asignar el release a los testers o grupos correspondientes (ej. grupo `QA_Clase` con el tester `dduran@uceva.edu.co`).
+5. Añadir las Release Notes y distribuir.
+
+### Notas sobre Versionado
+- Se ha actualizado la versión en `pubspec.yaml` de `1.0.0+1` a `1.0.1+2` para simular la actualización.
+- Formato de Release Notes utilizado: Detalle de cambios por versión y fecha.
+
+### Bitácora de QA
+- **Versión**: 1.0.1+2
+- **Fecha**: 3 de Mayo de 2026
+- **Cambios**: Se añadió el permiso de INTERNET en `AndroidManifest.xml` y se incrementó la versión en `pubspec.yaml`.
+- **Incidencias**: Ninguna incidencia bloqueante encontrada durante la generación del APK.
+- **Estado de pruebas**: APK de release generado correctamente y listo para ser distribuido a los testers.

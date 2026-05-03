@@ -51,7 +51,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _appBarTitle = "Hola, Flutter";
+  String _appBarTitle = "Hola, Flutter 1.0.1";
 
   List<ResidentEvilGame> get _residentEvilGames => [
     ResidentEvilGame(
@@ -91,9 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _toggleTitle() {
     setState(() {
-      _appBarTitle = _appBarTitle == "Hola, Flutter"
+      _appBarTitle = _appBarTitle == "Hola, Flutter 1.0.1"
           ? "¡Título cambiado!"
-          : "Hola, Flutter";
+          : "Hola, Flutter 1.0.1";
     });
 
     ScaffoldMessenger.of(context).showSnackBar(
