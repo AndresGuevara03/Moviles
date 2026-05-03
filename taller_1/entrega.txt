@@ -1,0 +1,9 @@
+Enlace de instalación (Firebase App Distribution): [Debe ser reemplazado por el enlace generado en Firebase Console]
+
+Release Notes:
+- Versión: 1.0.1+2
+- Fecha: 3 de Mayo de 2026
+- Cambios:
+  - Se agregó el permiso de INTERNET en AndroidManifest.xml.
+  - Se actualizó la versión en pubspec.yaml para la actualización incremental (1.0.0 -> 1.0.1).
+- Notas adicionales: Credenciales de prueba no requeridas.
